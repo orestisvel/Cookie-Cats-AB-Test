@@ -40,7 +40,7 @@ As shown in the summary, there is an extreme outlier: while most players played 
 Since we're focusing on casual player behavior, the extreme outlier with 49,854 game rounds would heavily skew the distribution without providing meaningful insights. Therefore, we removed it from the analysis.
 
 
-Next, we analyzed the total number of game rounds. We plotted a graph to visualize the distribution of game rounds played by players, separated by game version.
+Next, we analyzed the distribution of total game rounds, for players who played up to 200 rounds. We plotted a graph to visualize the distribution of game rounds played by players, separated by game version.
 
 ![image](https://github.com/user-attachments/assets/2a3e0145-e109-499f-a713-c1f30d7d6683)
 
