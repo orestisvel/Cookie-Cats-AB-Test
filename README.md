@@ -66,15 +66,80 @@ Based on the chart, there were no visually noticeable differences between the tw
 
 ![image](https://github.com/user-attachments/assets/ce0c6a77-c640-4e15-a32f-9c18516031e9)
 
-Version 1 --- Gate 30                                                         Version 2 --- Gate 40
+Version 1 --- Gate 30                                                         
 
-Retention_1 = 44.82% of players returned the next day                         Retention_1 = 44.23% returned the next day
-Retention_7 = 19.02% returned one week later                                  Retention_7 = 18.20% returned after one week
+Retention_1 = 44.82% of players returned the next day                        
+Retention_7 = 19.02% returned one week later                                 
 
 Version 2 --- Gate 40
 
 Retention_1 = 44.23% returned the next day
 Retention_7 = 18.20% returned after one week
+
+Though the retention is again almost the same, there is slightly better player return on gate 1 both on one day after, and week
+
+![image](https://github.com/user-attachments/assets/dafdbf28-6220-466f-92d8-ab7df5546f4b)
+
+We also calculated the number of players who returned both the next day and after the first week.
+
+![image](https://github.com/user-attachments/assets/2844bea6-d69b-442b-8819-e6960104da5c)
+
+Although the difference is small, gate_30 (version 1) had around 150 more players who returned on both Day 1 and Day 7 compared to gate_40 (version 2) ,despite version 2 having 789 more total users. This could be a point for gate_30.
+
+Next, we conducted hypothesis testing to determine whether changing the gate from level 30 to level 40 had a statistically significant impact on player retention.
+
+📊 Hypothesis Testing
+We used the proportions_ztest function from the statsmodels library to perform a two-proportion z-test. This test compares the retention rates of players between the two game versions: gate_30 and gate_40.
+
+Null Hypothesis (H₀): There is no difference in retention between the two groups.
+
+Alternative Hypothesis (H₁): There is a difference in retention between the two groups.
+
+The test returns a z-score and a p-value:
+
+The z-score measures how many standard deviations the observed difference is from the expected difference under the null hypothesis.
+
+The p-value indicates the probability of observing such a difference (or more extreme) by chance.
+
+Decision Rule:
+If p < 0.05, we reject the null hypothesis and conclude the gate change had a statistically significant effect on retention.
+
+If p ≥ 0.05, we fail to reject the null hypothesis, meaning there is not enough evidence to say the gate change had a meaningful impact.
+
+
+![image](https://github.com/user-attachments/assets/66a253d7-abd7-4d65-9bc9-52c1ab594fa9)
+
+A z-score of 1.7871 is not far enough from 0 to be considered statistically significant. Since the p-value is above 0.05, we fail to reject the null hypothesis—there's no strong evidence that changing the gate affected next-day retention.
+
+![image](https://github.com/user-attachments/assets/34cbc0ea-f1aa-48cb-9df0-a1085df6a12b)
+
+A z-score above 3 indicates a large enough difference to be unlikely due to random chance. Since the p-value is well below 0.05, we reject the null hypothesis. This result suggests that gate_30 produced significantly better Day 7 retention, with the z-score confirming that this is a meaningful effect.
+
+
+Insights Summary
+---------------------------------------------------------------------------------
+
+Combining insights from both our exploratory data analysis and hypothesis testing, we can conclude that Version 1 (gate at level 30) results in slightly better player retention.
+
+While the difference in Day 1 retention was not statistically significant (p-value > 0.05), this could be because many players did not reach level 30 on their first day. As a result, they weren’t yet exposed to the gate, meaning the experimental change hadn’t had a chance to influence their behavior. In contrast, the statistically significant result for Day 7 retention suggests that once players do encounter the gate, the placement at level 30 may help retain more of them in the following days.
+
+One possible reason why gate 30 outperformed gate 40 could be that level 30 is a more natural point for a forced break. By that stage, players may still feel engaged and motivated to continue. In contrast, placing the gate at level 40 might come too late, at a point where some players are already starting to lose interest or fatigue, leading them to drop off before ever reaching the gate. This means fewer players actually experience the gate at all, and those who do might not be as motivated to continue
+
+
+Additional Data That Could Be Interesting
+---------------------------------------------------------------------------------
+The exact day of the game download
+Understanding which day of the week players installed the game could reveal behavioral trends. For example, users may spend more time playing on weekends or holidays, potentially improving early retention.
+
+What if the gate was placed earlier, say at level 20?
+It would be valuable to test whether introducing the gate sooner would improve or hurt engagement. Would it filter out casual users too early, or help form habits faster?
+
+Daily player activity
+Knowing how many levels or rounds a player completes each day would give us a much clearer view of progression speed, session frequency, and overall engagement patterns.
+
+
+
+
 
 
 
