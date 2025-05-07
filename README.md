@@ -2,6 +2,9 @@
 
 In this project, we will conduct an A/B test on data from the mobile puzzle game Cookie Cats.
 
+![image](https://github.com/user-attachments/assets/e88cde15-19f6-456d-b7a1-467e8b59adcc)
+
+
 Cookie Cats is a popular puzzle game developed by Tactile Entertainment, first released on April 27, 2016. With over 1 million downloads on Google Play alone, the game features a classic "connect-three" mechanic, where players match tiles of the same color to clear the board and advance through increasingly challenging levels.
 
 As players progress through Cookie Cats, they occasionally hit gates that either require a wait or an in-app purchase to continue. These gates not only encourage spending but also give players a forced break, which may help sustain long-term enjoyment.
