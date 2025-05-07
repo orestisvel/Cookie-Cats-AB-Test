@@ -55,7 +55,7 @@ In contrast, players in Gate 40 had not yet encountered the gate during this ran
 
 Then we calculated distribution statistics for the number of game rounds per player, split by game version. This includes some percentiles from 1% to 99%, along with the mean, standard deviation, minimum, and maximum values. 
 
-![image](https://github.com/user-attachments/assets/2360d89a-f25d-4211-b660-ce2878d253da
+![image](https://github.com/user-attachments/assets/e67c9f50-1de5-4025-a76d-86e9cb117fb0)
 
 
 Next, we analyzed retention rates. 
